@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width-device-width, intial-scale=1.0">
+	<title>Profile Page</title>
+    <link rel="stylesheet" href="infoPage.css">
+</head>
+<body>
+    <h1>About You</h1>
+    <div class = "infoContainer">
+	<form action="infoPage.php"  method="post">
+        <div class="profile-pic-div">
+        <img src="image.jpg">
+        <input type="file" name="photo" id="file">
+        <label for="file" id="uploadBtn">Choose Photo</label><br>
+        </div>
+        <input type="text" placeholder="Your First Name" name="name" required><br>
+		<input type="number" placeholder="Your Age" name="age"><br>
+		<label for="gender">Your Gender: </label>
+		<select name = "gender">
+            <option value=""></option>
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+			<option value="other">Other</option>
+		 </select><br>
+		 <label for="role">Your Role: </label>
+		 <select name="role" required>
+            <option value=""></option>
+		 	<option value="artist">Artist</option>
+		 	<option value="manager">Manager</option>
+		 	<option value="label">Record Label</option>
+		  </select><br>
+		  <label for="band">Are you a Solo Artist or a part of a band?</label>
+		  <select name = "band">
+            <option value=""></option>
+		  	<option value="band">Band</option>
+		  	<option value="solo">Solo</option>
+		  </select><br>
+		  <label for="genre">Your Preferred Genre(s) of Music: </label>
+		 <select data-placeholder="Begin typing a name to filter..." multiple class="chosen-select" name="genre" required>
+            <option value=""></option>
+		  	<option value="pop">Pop</option>
+		  	<option value="rock">Rock</option>
+		  	<option value="randb">R&B</option>
+		  	<option value="hip_hop">Hip-Hop</option>
+		  	<option value="jazz">Jazz</option>
+		  	<option value="classic">Classical</option>
+		  	<option value="dance">Dance</option>
+		  	<option value="traditional">Traditional</option>
+		  </select><br>
+		  <label for="manager">Do you have a Manager?</label>
+		   <select name = "manager">
+            <option value=""></option>
+		  	<option value="yes">Yes</option>
+		  	<option value="no">No</option>
+		  </select><br>
+		  <label for="label">Are you signed to a Label?</label>
+		   <select name = "label">
+            <option value=""></option>
+		  	<option value="yes">Yes</option>
+		  	<option value="no">No</option>
+		  </select><br>
+		  <textarea name="description"  rows="4" cols="50">More About You...
+		  </textarea><br>
+          <input type="text" placeholder="Instruments You Play" name="instruments"><br>
+          <input type="submit">
+	</form>
+    </div>
+	</body>
